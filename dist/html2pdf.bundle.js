@@ -7643,7 +7643,7 @@ var getQuote = function getQuote(style, isOpening, quoteDepth) {
     if (!isOpening) {
         ++idx;
     }
-    return quotes[idx].replace(/^["']|["']$/g, '');
+    return (quotes[idx] || '').replace(/^["']|["']$/g, '');
 };
 
 var formatCounterValue = function formatCounterValue(counter, glue, format) {
